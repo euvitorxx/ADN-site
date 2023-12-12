@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Exemplo de projetos (pode ser substituído por dados dinâmicos)
     const projectsData = [
-        { title: 'Projeto 1', description: 'Descrição do Projeto 1' },
-        { title: 'Projeto 2', description: 'Descrição do Projeto 2' },
-        { title: 'Projeto 3', description: 'Descrição do Projeto 3' },
+        { title: 'MEC IMPEERIUM', description: 'Descrição do Projeto 1' },
+        { title: 'IMPEERIUM', description: 'Descrição do Projeto 2' },
+        { title: 'DEV IMPEERIUM', description: 'Descrição do Projeto 3' },
     ];
 
     // Adiciona os projetos à seção de projetos
