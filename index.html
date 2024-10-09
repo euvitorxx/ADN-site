@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ADN Engenharia - Contato</title>
-    <!-- Link para a fonte "Garet" -->
     <link href="https://fonts.googleapis.com/css2?family=Garet&display=swap" rel="stylesheet">
     <style>
         body {
@@ -13,7 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: #101010; /* Cor de fundo sólida */
-            color: #ffffff;
+            color: #ffffff; /* Cor padrão do texto */
             text-align: center;
         }
 
@@ -21,31 +20,40 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: rgba(26, 26, 26, 0.8); /* Fundo semi-transparente para destacar o texto */
+            background: #0d1824; /* Cor de fundo */
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            opacity: 0; /* Começa invisível */
+            transition: opacity 0.5s ease; /* Efeito de transição */
         }
 
-        h1 {
-            color: #f6a800;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .contact-info {
-            font-size: 24px;
-            margin: 20px 0;
-            color: #f6a800;
+        .logo {
+            margin-bottom: 20px; /* Espaçamento abaixo do logo */
         }
 
         .services {
-            font-size: 18px;
+            font-size: 20px;
             margin: 20px 0;
             text-align: left; /* Alinhar texto à esquerda */
         }
 
         .service-item {
-            margin: 5px 0; /* Espaçamento entre os itens de serviço */
+            margin: 10px 0; /* Espaçamento entre os itens de serviço */
+            color: #ffffff; /* Cor dos itens de serviço */
+            display: flex;
+            align-items: center;
+            font-weight: bold; /* Destacar os itens de serviço */
+            transition: transform 0.3s; /* Efeito de transição para escala */
+        }
+
+        .service-item:hover {
+            transform: scale(1.05); /* Aumentar o tamanho ao passar o mouse */
+        }
+
+        .service-item::before {
+            content: "✔️"; /* Ícone de check para adicionar destaque */
+            margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+            font-size: 24px; /* Aumentar o tamanho do ícone */
         }
 
         .whatsapp-link {
@@ -57,42 +65,79 @@
             text-decoration: none;
             font-size: 20px;
             margin: 20px 0;
+            transition: background-color 0.3s; /* Efeito de transição para o botão */
         }
 
         .whatsapp-link:hover {
             background-color: #128C7E; /* Cor do WhatsApp ao passar o mouse */
         }
 
-        .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #ffffff;
+        .message {
+            font-size: 20px; /* Tamanho da fonte */
+            color: #ffffff; /* Cor do texto da mensagem */
+            margin: 20px 0; /* Margem acima e abaixo */
+        }
+
+        @media (max-width: 600px) {
+            .service-item {
+                font-size: 18px; /* Ajustar tamanho da fonte em telas pequenas */
+            }
+
+            .message {
+                font-size: 18px; /* Ajustar tamanho da fonte em telas pequenas */
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>ADN Engenharia</h1>
-        <p>Precisa construir ou reformar? Entre em contato!</p>
-
-        <div class="services">
-            <p class="service-item">• Construção</p>
-            <p class="service-item">• Reforma</p>
-            <p class="service-item">• Pintura</p>
-            <p class="service-item">• Hidráulica</p>
-            <p class="service-item">• Telhado e calha</p>
-            <p class="service-item">• Piso e revestimento</p>
-            <p class="service-item">• Reparos em geral</p>
-            <p class="service-item">• Piscinas</p>
-        </div>
-
+    <div class="container" id="container">
+        <img src="ADN_LOGO.png" alt="Logo ADN Engenharia" class="logo" width="200"> <!-- Logo no topo -->
+        <div class="services" id="services"></div> <!-- Contêiner para os serviços -->
+        <p class="message" id="highlighted-message"></p> <!-- Mensagem -->
         <a href="https://wa.me/5538998487948" class="whatsapp-link" target="_blank">Clique aqui para falar no WhatsApp!</a>
-
-        <div class="footer">
-            <p>Curvelo e região! Faça seu orçamento agora mesmo!</p>
-        </div>
     </div>
+
+    <script>
+        // Função para mostrar o container com um efeito de transição
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById("container");
+            container.style.opacity = "1"; // Torna o container visível
+            displayServices(); // Chama a função para exibir os serviços
+            displayMessage(); // Chama a função para exibir a mensagem
+        });
+
+        // Função para exibir os serviços
+        function displayServices() {
+            const servicesList = [
+                "Construção com qualidade garantida! 🏗️",
+                "Reformas que transformam espaços! 🔨",
+                "Pintura para dar vida à sua casa! 🎨",
+                "Hidráulica de primeira, sem vazamentos! 💧",
+                "Telhados e calhas que duram! ☔",
+                "Pisos e revestimentos que impressionam! 🛠️",
+                "Reparos em geral, a solução que você precisa! 🛠️",
+                "Piscinas para momentos inesquecíveis! 🏊"
+            ];
+
+            const servicesContainer = document.getElementById("services");
+
+            // Cria e adiciona cada item de serviço ao contêiner
+            servicesList.forEach(service => {
+                const serviceItem = document.createElement("p");
+                serviceItem.className = "service-item";
+                serviceItem.textContent = service;
+                servicesContainer.appendChild(serviceItem);
+            });
+        }
+
+        // Função para exibir a mensagem
+        function displayMessage() {
+            const message = "Precisa construir ou reformar? Faça seu Orçamento agora mesmo!";
+            const messageContainer = document.getElementById("highlighted-message");
+            messageContainer.textContent = message; // Define o texto da mensagem
+        }
+    </script>
 
 </body>
 </html>
