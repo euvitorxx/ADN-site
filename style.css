@@ -10,10 +10,20 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
     margin: 0;
+}
+
+#menu-icon {
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
 }
 
 nav {
@@ -21,6 +31,7 @@ nav {
     justify-content: center;
     background-color: #002244;
     padding: 10px;
+    transition: max-height 0.5s ease;
 }
 
 nav a {
@@ -49,6 +60,7 @@ nav a:hover {
 .hero h2 {
     font-size: 48px;
     margin: 0;
+    animation: fadeIn 2s ease-in;
 }
 
 .content {
@@ -81,6 +93,11 @@ nav a:hover {
     padding: 20px;
     width: 25%;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.services div:hover {
+    transform: translateY(-10px);
 }
 
 .services h4 {
@@ -95,4 +112,22 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #menu-icon {
+        display: block;
+    }
 }
