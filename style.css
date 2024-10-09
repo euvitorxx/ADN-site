@@ -1,60 +1,98 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #000;
-    color: #ff6f61; /* Vermelho */
+    background-color: #003366;
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 20px;
-    position: relative;
 }
 
-.title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-bottom: 5px;
-    position: relative;
-    display: inline-block;
+header h1 {
+    margin: 0;
 }
 
-.title::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    background-color: #ff6f61; /* Laranja */
-    border-radius: 0 0 15px 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1;
-}
-
-#projects {
+nav {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #002244;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #0055a5;
+}
+
+.hero {
+    background-image: url('https://example.com/engenharia-bg.jpg'); /* Substitua pela sua imagem */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.content p {
+    font-size: 18px;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services {
+    display: flex;
     justify-content: space-around;
+    margin-top: 40px;
+}
+
+.services div {
+    background-color: #e4e4e4;
     padding: 20px;
-    font-family: 'DejaVu Sans Mono', monospace;
-}
-
-.project {
-    border: 1px solid #555; /* Borda mais escura */
+    width: 25%;
     border-radius: 8px;
-    margin: 10px;
-    padding: 15px;
-    width: 300px;
-    background-color: #333; /* Fundo mais escuro */
 }
 
-.project h2 {
-    color: #ff6f61; /* Vermelho */
+.services h4 {
+    color: #003366;
 }
 
-.project p {
-    color: #ccc; /* Cinza mais claro para o texto */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
