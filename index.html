@@ -10,200 +10,143 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #003366;
+            background-color: #101010;
             color: white;
-            padding: 20px;
             text-align: center;
-            position: relative;
         }
 
-        header h1 {
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0e0e0e;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .header h1 {
+            color: #f6a800;
+            font-size: 28px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #f6a800;
             margin: 0;
         }
 
-        #menu-icon {
-            display: none;
-            font-size: 30px;
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            cursor: pointer;
+        .services {
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        nav {
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+            color: #f6a800;
+        }
+
+        .services ul li {
+            font-size: 18px;
+            padding: 8px 0;
             display: flex;
-            justify-content: center;
-            background-color: #002244;
-            padding: 10px;
-            transition: max-height 0.5s ease;
+            align-items: center;
         }
 
-        nav a {
+        .services ul li::before {
+            content: "•";
+            font-size: 24px;
+            color: #f6a800;
+            margin-right: 10px;
+        }
+
+        .logo {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .contact {
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact a {
             color: white;
-            padding: 10px 20px;
             text-decoration: none;
             font-weight: bold;
         }
 
-        nav a:hover {
-            background-color: #0055a5;
+        .contact .social-icons {
+            margin-top: 10px;
         }
 
-        .hero {
-            background-image: url('https://example.com/engenharia-bg.jpg'); /* Substitua pela sua imagem */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        .contact .social-icons a {
+            margin: 0 10px;
         }
 
-        .hero h2 {
-            font-size: 48px;
-            margin: 0;
-            animation: fadeIn 2s ease-in;
-        }
-
-        .content {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .content h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #003366;
-        }
-
-        .content p {
-            font-size: 18px;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-
-        .services div {
-            background-color: #e4e4e4;
-            padding: 20px;
-            width: 25%;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .services div:hover {
-            transform: translateY(-10px);
-        }
-
-        .services h4 {
-            color: #003366;
-        }
-
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Estilos para dispositivos móveis */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                max-height: 0;
-                overflow: hidden;
-            }
-
-            #menu-icon {
-                display: block;
-            }
+        .contact .social-icons img {
+            width: 30px;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>ADN Engenharia</h1>
-    <p>Transformando Ideias em Realidade</p>
-    <div id="menu-icon" onclick="toggleMenu()">☰</div> <!-- Ícone de menu para mobile -->
-</header>
+    <div class="container">
+        <div class="header">
+            <h1>PRECISA CONSTRUIR OU REFORMAR?</h1>
+            <p>Construção • Reforma • Pintura • Hidráulica • Telhado • Calha • Revestimento • Piscinas</p>
+        </div>
 
-<nav id="nav-menu">
-    <a href="#">Início</a>
-    <a href="#">Serviços</a>
-    <a href="#">Sobre Nós</a>
-    <a href="#">Contato</a>
-</nav>
+        <div class="services">
+            <ul>
+                <li>Construção</li>
+                <li>Reforma</li>
+                <li>Pintura</li>
+                <li>Hidráulica</li>
+                <li>Telhado e calha</li>
+                <li>Piso e revestimento</li>
+                <li>Reparos em geral</li>
+                <li>Piscinas</li>
+            </ul>
+        </div>
 
-<section class="hero">
-    <h2>Projetos de Engenharia com Inovação e Sustentabilidade</h2>
-</section>
+        <div class="logo">
+            <img src="https://example.com/logo.png" alt="Logo ADN Engenharia"> <!-- Substitua o link pela URL da sua logo -->
+        </div>
 
-<section class="content">
-    <h3>Quem Somos</h3>
-    <p>Na <strong>ADN Engenharia</strong>, transformamos seus sonhos em realidade! Com um time especializado e comprometido, realizamos projetos que prezam pela inovação, tecnologia e precisão. Seja uma grande infraestrutura ou uma obra civil, garantimos qualidade, eficiência e sustentabilidade em cada detalhe.</p>
-</section>
-
-<section class="services">
-    <div>
-        <h4>Planejamento e Execução</h4>
-        <p>Desenvolvemos projetos completos com foco em eficiência e inovação.</p>
+        <div class="contact">
+            <p>Entre em contato agora mesmo!</p>
+            <a href="https://wa.me/5538998487948" target="_blank">WhatsApp: (38) 99848-7948</a>
+            <div class="social-icons">
+                <a href="https://instagram.com/adn.engenharia" target="_blank">
+                    <img src="https://example.com/whatsapp-icon.png" alt="WhatsApp"> <!-- Ícone do WhatsApp -->
+                </a>
+                <a href="https://instagram.com/adn.engenharia" target="_blank">
+                    <img src="https://example.com/instagram-icon.png" alt="Instagram"> <!-- Ícone do Instagram -->
+                </a>
+            </div>
+        </div>
     </div>
-    <div>
-        <h4>Gestão de Obras</h4>
-        <p>Acompanhamento completo das obras para garantir qualidade e prazos.</p>
-    </div>
-    <div>
-        <h4>Soluções Sustentáveis</h4>
-        <p>Integramos práticas sustentáveis em todos os projetos para um futuro melhor.</p>
-    </div>
-</section>
-
-<footer>
-    <p>© 2024 ADN Engenharia - Todos os Direitos Reservados</p>
-</footer>
-
-<script>
-    // Função para alternar o menu de navegação em dispositivos móveis
-    function toggleMenu() {
-        const navMenu = document.getElementById('nav-menu');
-        if (navMenu.style.maxHeight) {
-            navMenu.style.maxHeight = null;
-        } else {
-            navMenu.style.maxHeight = navMenu.scrollHeight + "px";
-        }
-    }
-
-    // Animação de fade-in para a seção "hero"
-    window.onload = function() {
-        const heroText = document.querySelector('.hero h2');
-        heroText.style.opacity = 0;
-        setTimeout(() => {
-            heroText.style.opacity = 1;
-        }, 500);
-    };
-</script>
 
 </body>
 </html>
