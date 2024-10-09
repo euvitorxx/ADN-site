@@ -50,10 +50,12 @@
             transform: scale(1.05); /* Aumentar o tamanho ao passar o mouse */
         }
 
-        .service-item::before {
-            content: "✔️"; /* Ícone de check para adicionar destaque */
-            margin-right: 10px; /* Espaçamento entre o ícone e o texto */
-            font-size: 24px; /* Aumentar o tamanho do ícone */
+        .bullet {
+            width: 12px; /* Tamanho da bola */
+            height: 12px; /* Tamanho da bola */
+            background-color: #f6a800; /* Cor da bola */
+            border-radius: 50%; /* Torna a bola circular */
+            margin-right: 10px; /* Espaçamento entre a bola e o texto */
         }
 
         .whatsapp-link {
@@ -95,46 +97,73 @@
         <img src="ADN_LOGO.png" alt="Logo ADN Engenharia" class="logo" width="200"> <!-- Logo no topo -->
         <div class="services" id="services"></div> <!-- Contêiner para os serviços -->
         <p class="message" id="highlighted-message"></p> <!-- Mensagem -->
-        <a href="https://wa.me/5538998487948" class="whatsapp-link" target="_blank">Clique aqui para falar no WhatsApp!</a>
+        <a href="https://wa.me/5538998487948" class="whatsapp-link" target="_blank">
+            <img src="whatsapp-icon.png" alt="Ícone do WhatsApp" width="30" style="vertical-align: middle; margin-right: 8px;">
+            Clique aqui para falar no WhatsApp!
+        </a>
     </div>
 
     <script>
-        // Função para mostrar o container com um efeito de transição
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", () => {
             const container = document.getElementById("container");
             container.style.opacity = "1"; // Torna o container visível
             displayServices(); // Chama a função para exibir os serviços
             displayMessage(); // Chama a função para exibir a mensagem
         });
 
-        // Função para exibir os serviços
         function displayServices() {
             const servicesList = [
-                "Construção com qualidade garantida! 🏗️",
-                "Reformas que transformam espaços! 🔨",
-                "Pintura para dar vida à sua casa! 🎨",
-                "Hidráulica de primeira, sem vazamentos! 💧",
-                "Telhados e calhas que duram! ☔",
-                "Pisos e revestimentos que impressionam! 🛠️",
-                "Piscinas para momentos inesquecíveis! 🏊"
+                "Construção com qualidade garantida!",
+                "Reformas que transformam espaços!",
+                "Pintura para dar vida à sua casa!",
+                "Hidráulica de primeira, sem vazamentos!",
+                "Telhados e calhas que duram!",
+                "Pisos e revestimentos que impressionam!",
+                "Piscinas para momentos inesquecíveis!"
             ];
 
             const servicesContainer = document.getElementById("services");
-
-            // Cria e adiciona cada item de serviço ao contêiner
             servicesList.forEach(service => {
                 const serviceItem = document.createElement("p");
                 serviceItem.className = "service-item";
-                serviceItem.textContent = service;
-                servicesContainer.appendChild(serviceItem);
+                
+                // Cria a bola
+                const bullet = document.createElement("span");
+                bullet.className = "bullet";
+
+                serviceItem.appendChild(bullet); // Adiciona a bola
+                serviceItem.appendChild(document.createTextNode(service)); // Adiciona o texto
+                serviceItem.appendChild(document.createTextNode(" " + getEmoji(service))); // Adiciona emoji ao final
+                servicesContainer.appendChild(serviceItem); // Adiciona ao contêiner
             });
         }
 
-        // Função para exibir a mensagem
+        function getEmoji(service) {
+            switch (service) {
+                case "Construção com qualidade garantida!":
+                    return "🏗️";
+                case "Reformas que transformam espaços!":
+                    return "🔨";
+                case "Pintura para dar vida à sua casa!":
+                    return "🎨";
+                case "Hidráulica de primeira, sem vazamentos!":
+                    return "💧";
+                case "Telhados e calhas que duram!":
+                    return "☔";
+                case "Pisos e revestimentos que impressionam!":
+                    return "🛠️";
+                case "Piscinas para momentos inesquecíveis!":
+                    return "🏊";
+                default:
+                    return "";
+            }
+        }
+
         function displayMessage() {
-            const message = "Precisa construir ou reformar? Faça seu Orçamento agora mesmo!";
+            const message = "Precisa de reforma? Faça seu orçamento! ";
             const messageContainer = document.getElementById("highlighted-message");
             messageContainer.textContent = message; // Define o texto da mensagem
+            messageContainer.append(getEmoji("Precisa de reforma? Faça seu orçamento!")); // Adiciona emoji ao final da mensagem
         }
     </script>
 
