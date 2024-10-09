@@ -3,20 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <title>Vitor Mendes</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ADN Engenharia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #002244;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #0055a5;
+        }
+
+        .hero {
+            background-image: url('https://example.com/engenharia-bg.jpg'); /* Substitua pela sua imagem */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .services div {
+            background-color: #e4e4e4;
+            padding: 20px;
+            width: 25%;
+            border-radius: 8px;
+        }
+
+        .services h4 {
+            color: #003366;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1 class="title">VITOR MENDES</h1>
-        <p>Web Developer; Social Midia; Designer</p>
-    </header>
 
-    <section id="projects">
-        <!-- Projetos serão adicionados dinamicamente com JavaScript -->
-    </section>
+<header>
+    <h1>ADN Engenharia</h1>
+    <p>Transformando Ideias em Realidade</p>
+</header>
 
-    <script src="script.js"></script>
+<nav>
+    <a href="#">Início</a>
+    <a href="#">Serviços</a>
+    <a href="#">Sobre Nós</a>
+    <a href="#">Contato</a>
+</nav>
+
+<section class="hero">
+    <h2>Projetos de Engenharia com Inovação e Sustentabilidade</h2>
+</section>
+
+<section class="content">
+    <h3>Quem Somos</h3>
+    <p>Na <strong>ADN Engenharia</strong>, transformamos seus sonhos em realidade! Com um time especializado e comprometido, realizamos projetos que prezam pela inovação, tecnologia e precisão. Seja uma grande infraestrutura ou uma obra civil, garantimos qualidade, eficiência e sustentabilidade em cada detalhe.</p>
+</section>
+
+<section class="services">
+    <div>
+        <h4>Planejamento e Execução</h4>
+        <p>Desenvolvemos projetos completos com foco em eficiência e inovação.</p>
+    </div>
+    <div>
+        <h4>Gestão de Obras</h4>
+        <p>Acompanhamento completo das obras para garantir qualidade e prazos.</p>
+    </div>
+    <div>
+        <h4>Soluções Sustentáveis</h4>
+        <p>Integramos práticas sustentáveis em todos os projetos para um futuro melhor.</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 ADN Engenharia - Todos os Direitos Reservados</p>
+</footer>
+
 </body>
 </html>
