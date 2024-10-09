@@ -4,157 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ADN Engenharia</title>
+    <title>ADN Engenharia - Contato</title>
+    <!-- Link para a fonte "Garet" -->
+    <link href="https://fonts.googleapis.com/css2?family=Garet&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Garet', sans-serif; /* Usando a fonte Garet */
             margin: 0;
             padding: 0;
-            background-color: #101010;
+            background-color: #101010; /* Cor de fundo sólida */
             color: #ffffff;
             text-align: center;
         }
 
         .container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: #1a1a1a;
+            background: rgba(26, 26, 26, 0.8); /* Fundo semi-transparente para destacar o texto */
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .header {
-            background-color: #000000;
-            padding: 20px;
-            border-radius: 10px 10px 0 0;
+        h1 {
+            color: #f6a800;
+            font-size: 36px;
+            margin-bottom: 20px;
         }
 
-        .header h1 {
+        .contact-info {
+            font-size: 24px;
+            margin: 20px 0;
             color: #f6a800;
-            font-size: 28px;
-            margin: 0;
-            padding-bottom: 10px;
-        }
-
-        .header p {
-            font-size: 16px;
-            color: #f6a800;
-            margin: 0;
         }
 
         .services {
-            text-align: left;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .services ul {
-            list-style-type: none;
-            padding: 0;
-            color: #f6a800;
-        }
-
-        .services ul li {
             font-size: 18px;
-            padding: 8px 0;
-            display: flex;
-            align-items: center;
+            margin: 20px 0;
+            text-align: left; /* Alinhar texto à esquerda */
         }
 
-        .services ul li::before {
-            content: "•";
-            font-size: 24px;
-            color: #f6a800;
-            margin-right: 10px;
+        .service-item {
+            margin: 5px 0; /* Espaçamento entre os itens de serviço */
         }
 
-        .logo {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .logo img {
-            width: 150px;
-        }
-
-        .contact {
-            background-color: #000000;
-            padding: 10px;
-            border-radius: 0 0 10px 10px;
-        }
-
-        .contact p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        .contact a {
-            color: #ffffff;
+        .whatsapp-link {
+            display: inline-block;
+            background-color: #25D366; /* Cor do WhatsApp */
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 20px;
+            margin: 20px 0;
         }
 
-        .contact .social-icons {
-            margin-top: 10px;
-        }
-
-        .contact .social-icons a {
-            margin: 0 10px;
-        }
-
-        .contact .social-icons img {
-            width: 30px;
-            vertical-align: middle;
+        .whatsapp-link:hover {
+            background-color: #128C7E; /* Cor do WhatsApp ao passar o mouse */
         }
 
         .footer {
-            margin-top: 20px;
-            color: #ffffff;
+            margin-top: 30px;
             font-size: 14px;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="header">
-            <h1>PRECISA CONSTRUIR OU REFORMAR?</h1>
-            <p>#15anos de Experiência em Construção Civil</p>
+        <h1>ADN Engenharia</h1>
+        <p>Precisa construir ou reformar? Entre em contato!</p>
+
+        <div class="contact-info">
+            <p>WhatsApp: <strong>(38) 99848-7948</strong></p>
         </div>
 
         <div class="services">
-            <ul>
-                <li>Construção</li>
-                <li>Reforma</li>
-                <li>Pintura</li>
-                <li>Hidráulica</li>
-                <li>Telhado e calha</li>
-                <li>Piso e revestimento</li>
-                <li>Reparos em geral</li>
-                <li>Piscinas</li>
-            </ul>
+            <p class="service-item">• Construção</p>
+            <p class="service-item">• Reforma</p>
+            <p class="service-item">• Pintura</p>
+            <p class="service-item">• Hidráulica</p>
+            <p class="service-item">• Telhado e calha</p>
+            <p class="service-item">• Piso e revestimento</p>
+            <p class="service-item">• Reparos em geral</p>
+            <p class="service-item">• Piscinas</p>
         </div>
 
-        <div class="logo">
-            <img src="ADN_LOGO.png" alt="Logo ADN Engenharia"> <!-- Logo adicionada -->
-        </div>
-
-        <div class="contact">
-            <p>Entre em contato agora mesmo!</p>
-            <a href="https://wa.me/5538998487948" target="_blank">WhatsApp: (38) 99848-7948</a>
-            <div class="social-icons">
-                <a href="https://wa.me/5538998487948" target="_blank">
-                    <img src="https://example.com/whatsapp-icon.png" alt="WhatsApp"> <!-- Ícone do WhatsApp -->
-                </a>
-                <a href="https://instagram.com/adn.engenharia" target="_blank">
-                    <img src="https://example.com/instagram-icon.png" alt="Instagram"> <!-- Ícone do Instagram -->
-                </a>
-            </div>
-        </div>
+        <a href="https://wa.me/5538998487948" class="whatsapp-link" target="_blank">Clique aqui para falar no WhatsApp!</a>
 
         <div class="footer">
-            <p>Curvelo e região! Clique 👇 e faça seu orçamento!</p>
+            <p>Curvelo e região! Faça seu orçamento agora mesmo!</p>
         </div>
     </div>
 
