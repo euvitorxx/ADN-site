@@ -1,23 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const projectsSection = document.getElementById('projects');
+// Função para alternar o menu de navegação em dispositivos móveis
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu.style.maxHeight) {
+        navMenu.style.maxHeight = null;
+    } else {
+        navMenu.style.maxHeight = navMenu.scrollHeight + "px";
+    }
+}
 
-    // Exemplo de projetos (pode ser substituído por dados dinâmicos)
-    const projectsData = [
-        { title: 'MEC IMPEERIUM', description: 'Projetos Mecânicos e Civil' },
-        { title: 'IMPEERIUM', description: 'Social Midia e Designer' },
-        { title: 'DEV IMPEERIUM', description: 'Desenvolvimento de WebSites' },
-    ];
-
-    // Adiciona os projetos à seção de projetos
-    projectsData.forEach(project => {
-        const projectElement = document.createElement('div');
-        projectElement.classList.add('project');
-
-        projectElement.innerHTML = `
-            <h2>${project.title}</h2>
-            <p>${project.description}</p>
-        `;
-
-        projectsSection.appendChild(projectElement);
-    });
-});
+// Animação de fade-in para a seção "hero"
+window.onload = function() {
+    const heroText = document.querySelector('.hero h2');
+    heroText.style.opacity = 0;
+    setTimeout(() => {
+        heroText.style.opacity = 1;
+    }, 500);
+};
